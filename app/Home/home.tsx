@@ -33,7 +33,7 @@ const data: RowData[] = [
 ];
 
 function HomePage() {
-  const [amount, setAmount] = useState<string>('0');
+  const [amount, setAmount] = useState<string>('');
   const isSchemeStarted = true;
   const isTotalDeposit = true;
   const isWallet = true;
@@ -47,22 +47,22 @@ function HomePage() {
         <div className="absolute w-[75.5%] h-[140px] top-[109px] rounded-[8px] bg-[#0D0D0D] border border-[#1A1919]">
           <div className="flex">
             <div>
-              <p className="w-[107px] h-[30px] font-Geist text-[24px] font-medium leading-[29.76px] text-left px-[28px] py-[28px] text-primary">
+              <p className="w-[107px] font-Geist text-[24px] font-medium leading-[29.76px] text-left px-[28px] py-[28px] text-primary">
                 Overview
               </p>
               {isSchemeStarted ? (
-                <p className="font-Geist text-[16px] w-[211px] h-[42px] mt-[12px] mx-[19px] p-[10px] gap-[10px] flex justify-center items-center font-medium rounded-[32px] leading-[29.76px] text-[#1BA27A] bg-[#002319]">
+                <p className="font-Geist text-[16px] w-[211px] mt-[12px] mx-[19px] p-[10px] gap-[10px] flex justify-center items-center font-medium rounded-[32px] leading-[29.76px] text-[#1BA27A] bg-[#002319]">
                   Scheme Has Started
                 </p>
               ) : (
-                <p className="font-Geist text-[16px] w-[211px] h-[42px] mt-[12px] mx-[19px] p-[10px] gap-[10px] flex justify-center items-center font-medium rounded-[32px] leading-[22.32px] text-[#A28B1B] bg-[#231D00]">
+                <p className="font-Geist text-[16px] w-[211px] mt-[12px] mx-[19px] p-[10px] gap-[10px] flex justify-center items-center font-medium rounded-[32px] leading-[22.32px] text-[#A28B1B] bg-[#231D00]">
                   Scheme Has Not Started
                 </p>
               )}
             </div>
             <div className="flex mt-[40px] ml-[200px]">
               <div>
-                <p className="text-[#5C5C5C] font-Geist text-[16px] w-[121px] h-[20px] leading-[19.84px]">
+                <p className="text-[#5C5C5C] font-Geist text-[16px] w-[121px] leading-[19.84px]">
                   Global Deposit
                 </p>
                 <div className="flex mt-[10px] justify-end gap-[5px]">
@@ -73,7 +73,7 @@ function HomePage() {
                 </div>
               </div>
               <div className="mx-[50px] justify-end">
-                <p className="text-[#5C5C5C] font-Geist text-[16tpx] w-[148px] h-[20px] leading-[19.84px]">
+                <p className="text-[#5C5C5C] font-Geist text-[16tpx] w-[148px] leading-[19.84px]">
                   Your Total Deposits
                 </p>
                 <div className="flex mt-[10px] justify-end gap-[4px]">
