@@ -2,17 +2,44 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import SchemeButton from './schemeButton';
-import Deposit from './deposit';
 import InputField from '../Input/input';
 
+type RowData = {
+  date: string;
+  depositAmount: string;
+  pointsGained: string;
+  unlocksIn: string;
+};
+
+const data: RowData[] = [
+  {
+    date: '23/06',
+    depositAmount: '40.00',
+    pointsGained: '--',
+    unlocksIn: '1:53:42',
+  },
+  {
+    date: '24/06',
+    depositAmount: '50.00',
+    pointsGained: '20',
+    unlocksIn: '2:00:00',
+  },
+  {
+    date: '25/06',
+    depositAmount: '30.00',
+    pointsGained: '10',
+    unlocksIn: '1:30:00',
+  },
+];
 
 function HomePage() {
   const [amount, setAmount] = useState<string>('0');
   const isSchemeStarted = true;
-  const isTotalDeposit = false;
+  const isTotalDeposit = true;
   const isWallet = true;
   const isClaim = false;
   const isClaimed = false;
+  const isYourDeposite = false;
 
   return (
     <div>
@@ -96,7 +123,7 @@ function HomePage() {
               </div>
               <div className="w-[392px] mr-2">
                 <div className="flex justify-between mt-2 bg-[#141414] gap-x-15 items-center rounded-[8px] pl-2">
-                  <div className='flex'>
+                  <div className="flex">
                     <div className="max-w-[165px] max-h-[165px] justify-center items-center pr-1">
                       <Image
                         src="/Frame.png"
@@ -165,25 +192,77 @@ function HomePage() {
                   Your Deposits
                 </p>
                 <div>
-                  <table className=" w-full mt-[16px]">
-                    <thead className=" border-t-[1px] border-b-[1px] border-[#1A1919]">
-                      <tr className="text-[#5C5C5C] font-Geist text-[16px] leading-[19.84px] h-[20px] font-medium ">
-                        <th className="py-[6px] ml-1" scope="col">
+                  <table className="w-full mt-[16px] ml-2 mr-2">
+                    <thead className="border-t-[1px] border-b-[1px] border-[#1A1919]">
+                      <tr className="text-[#5C5C5C] font-Geist text-[16px] leading-[19.84px] font-medium">
+                        <th className="py-[6px]" scope="col">
                           Date
                         </th>
                         <th className="ml-7" scope="col">
-                          Deposite Amount
+                          Deposit Amount
                         </th>
                         <th scope="col">Points Gained</th>
-                        <th scope="col">Unclocks In</th>
+                        <th scope="col">Unlocks In</th>
                         <th className="pr-4 text-[#0D0D0D]" scope="col">
-                          newcolumn
+                          New Column
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="text-white">
-                      <Deposit />
-                    </tbody>
+                    {isYourDeposite && (
+                      <tbody className="gap-y-2">
+                        {data.map((item, index) => (
+                          <tr key={index} className="text-center gap-2 py-2">
+                            <td className="text-[#5C5C5C] font-Geist text-[16px] leading-[19.84px] font-medium">
+                              {item.date}
+                            </td>
+                            <td className="text-primary font-Geist text-[16px] leading-[19.84px] font-medium mt-5 flex justify-center items-center">
+                              {item.depositAmount}{' '}
+                              <Image
+                                className="ml-1"
+                                src="/USDT.png"
+                                alt="usdt"
+                                width={17}
+                                height={17}
+                              />
+                            </td>
+                            <td className="text-primary font-Geist text-[16px] leading-[19.84px] font-medium">
+                              {item.pointsGained}
+                            </td>
+                            <td className="text-primary font-Geist text-[16px] leading-[19.84px] font-medium">
+                              {item.unlocksIn}
+                            </td>
+                            <td>
+                              <button className="bg-[#262626] px-[12px] py-[6px] my-4 text-[#A3A3A3] rounded-[4px] font-Geist text-[14px] leading-[15.41px]">
+                                Withdraw
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    )}
+                    {!isYourDeposite && (
+                      <tbody>
+                        <tr>
+                          <td colSpan={5}>
+                            <div className="w-full h-full flex flex-col justify-center items-center">
+                              <Image
+                                className="mt-32"
+                                src="/Locker-Safe.png"
+                                alt="usdt"
+                                width={41}
+                                height={41}
+                              />
+                              <p className="text-[#A3A3A3] font-Geist text-[14px] mt-3 leading-[15.41px]">
+                                No Deposits
+                              </p>
+                              <p className="text-[#525252] font-Geist text-[14px] mt-3 leading-[20px]">
+                                Start depositing to earn points
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    )}
                   </table>
                 </div>
               </div>
@@ -207,7 +286,7 @@ function HomePage() {
               </div>
               <div className="flex flex-col w-full justify-center items-center">
                 <InputField value={amount} onChange={setAmount} />
-                <div className="flex absolute top-20 right-4 mt-3 gap-1">
+                <div className="flex absolute top-20 right-4 mt-3 gap-1 mr-2">
                   <p className="text-white text-[#292929]">0.00</p>
                   <Image src="/USDT.png" alt="usdt" width={25} height={10} />
                 </div>

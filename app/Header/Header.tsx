@@ -52,7 +52,7 @@ function Header() {
             {walletAddress.slice(walletAddress.length - 2)}
           </p>
         ) : (
-          <p className="text-white">No wallet connected</p>
+          <p className="w-[123px] font-Geist text-[14px] flex items-center font-medium leading-[15.41px]">Connect Wallet</p>
         )}
       </div>
     </div>
