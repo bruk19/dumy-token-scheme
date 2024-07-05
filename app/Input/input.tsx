@@ -17,7 +17,7 @@ const InputField: React.FC<InputFieldProps> = ({
   return (
     <div className="relative w-[90%] ">
       <input
-        className={`h-[60px] bg-[#0F0F0F] w-full placeholder:text-[#5C5C5C] placeholder:font-Geist placeholder:text-[12px] placeholder:leading-[14.88px] text-primary px-2 ${className}`}
+        className={`h-[60px] bg-[#0F0F0F] w-full placeholder:text-[#292929] placeholder:font-Geist placeholder:text-[18px] placeholder:leading-[22.32px] text-primary px-2 ${className}`}
         type="text"
         placeholder={placeholder}
         value={value}

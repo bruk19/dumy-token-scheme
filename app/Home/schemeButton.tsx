@@ -110,7 +110,7 @@ function SchemeButton() {
     <div>
       {schemeState === 'not_started' && (
         <button
-          className="bg-[#FF70091A] w-full bg-[20%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[20px]"
+          className="bg-[#FF70091A] w-full bg-[20%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[35px]"
           onClick={handleButtonClick}
         >
           SCHEME HAS NOT STARTED
@@ -118,7 +118,7 @@ function SchemeButton() {
       )}
       {schemeState === 'connect_wallet' && (
         <button
-          className="bg-[#FF70091A] w-full bg-[20%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[20px]"
+          className="bg-[#FF70091A] w-full bg-[20%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[35px]"
           onClick={handleButtonClick}
         >
           CONNECT WALLET
@@ -134,14 +134,14 @@ function SchemeButton() {
       )}
       {schemeState === 'claim_token' && (
         <button
-          className="bg-[#FF70091A] w-full bg-[20%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[20px]"
+          className="bg-[#FF70091A] w-full bg-[20%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[15px]"
           onClick={claim}
         >
           CLAIM NOW {'->'}
         </button>
       )}
       {schemeState === 'claimed' && (
-        <div className="bg-[#FF70091A] w-full bg-[10%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[20px]">
+        <div className="bg-[#FF70091A] w-full bg-[10%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[15px]">
           CLAIMED
         </div>
       )}
