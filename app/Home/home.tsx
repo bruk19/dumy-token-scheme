@@ -34,7 +34,7 @@ const data: RowData[] = [
 
 function HomePage() {
   const [amount, setAmount] = useState<string>('');
-  const isSchemeStarted = true;
+  const isSchemeStarted = false;
   const isTotalDeposit = true;
   const isWallet = true;
   const isClaim = false;
@@ -45,24 +45,24 @@ function HomePage() {
     <div>
       <div className="w-full flex flex-col justify-center items-center">
         <div className="absolute w-[75.5%] h-[140px] top-[109px] rounded-[8px] bg-[#0D0D0D] border border-[#1A1919]">
-          <div className="flex">
+          <div className="flex justify-between pr-4">
             <div>
-              <p className="w-[107px] font-Geist text-[24px] font-medium leading-[29.76px] text-left px-[28px] py-[28px] text-primary">
+              <p className="font-Geist text-[24px] font-medium leading-[29.76px] text-left px-[28px] pt-6 text-primary">
                 Overview
               </p>
               {isSchemeStarted ? (
-                <p className="font-Geist text-[16px] w-[211px] mt-[12px] mx-[19px] p-[10px] gap-[10px] flex justify-center items-center font-medium rounded-[32px] leading-[29.76px] text-[#1BA27A] bg-[#002319]">
+                <p className="font-Geist text-[16px] mt-[5px] mx-[19px] p-[10px] gap-[10px] flex justify-center items-center font-medium rounded-[32px] leading-[29.76px] text-[#1BA27A] bg-[#002319]">
                   Scheme Has Started
                 </p>
               ) : (
-                <p className="font-Geist text-[16px] w-[211px] mt-[12px] mx-[19px] p-[10px] gap-[10px] flex justify-center items-center font-medium rounded-[32px] leading-[22.32px] text-[#A28B1B] bg-[#231D00]">
+                <p className="font-Geist text-[16px] mt-[12px] mx-[19px] p-[10px] gap-[10px] flex justify-center items-center font-medium rounded-[32px] leading-[22.32px] text-[#A28B1B] bg-[#231D00]">
                   Scheme Has Not Started
                 </p>
               )}
             </div>
-            <div className="flex mt-[40px] ml-[200px]">
+            <div className="flex mt-[40px]">
               <div>
-                <p className="text-[#5C5C5C] font-Geist text-[16px] w-[121px] leading-[19.84px]">
+                <p className="text-[#5C5C5C] font-Geist text-[16px] leading-[19.84px]">
                   Global Deposit
                 </p>
                 <div className="flex mt-[10px] justify-end gap-[5px]">
@@ -72,8 +72,8 @@ function HomePage() {
                   <Image src="/USDT.png" alt="usdt" width={20} height={20} />
                 </div>
               </div>
-              <div className="mx-[50px] justify-end">
-                <p className="text-[#5C5C5C] font-Geist text-[16tpx] w-[148px] leading-[19.84px]">
+              <div className="mx-[50px] ">
+                <p className="text-[#5C5C5C] font-Geist text-[16tpx] leading-[19.84px]">
                   Your Total Deposits
                 </p>
                 <div className="flex mt-[10px] justify-end gap-[4px]">
@@ -106,7 +106,6 @@ function HomePage() {
                 </div>
               </div>
             </div>
-            <div></div>
           </div>
         </div>
         {isClaim && isClaimed && (
@@ -192,8 +191,8 @@ function HomePage() {
                   Your Deposits
                 </p>
                 <div>
-                  <table className="w-full mt-[16px] ml-2 mr-2">
-                    <thead className="border-t-[1px] border-b-[1px] border-[#1A1919]">
+                  <table className="w-full mt-[16px] ml-2 mx-2">
+                    <thead className="border-t-[1px] border-b-[1px] mp-2 border-[#1A1919]">
                       <tr className="text-[#5C5C5C] font-Geist text-[16px] leading-[19.84px] font-medium">
                         <th className="py-[6px]" scope="col">
                           Date
