@@ -118,7 +118,7 @@ function SchemeButton() {
       )}
       {schemeState === 'connect_wallet' && (
         <button
-          className="bg-[#FF70091A] w-full bg-[20%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[35px]"
+          className="bg-[#FF70094D] w-full bg-[30%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[35px]"
           onClick={handleButtonClick}
         >
           CONNECT WALLET
@@ -126,18 +126,18 @@ function SchemeButton() {
       )}
       {schemeState === 'deposit_token' && (
         <button
-          className="bg-[#FF70091A] w-full bg-[20%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[20px]"
+          className="bg-[#FF70094D] w-full bg-[30%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[14px] leading-[19.84px] mt-[35px]"
           onClick={stake}
         >
-          DEPOSIT TOKEN {'->'}
+          DEPOSIT TOKEN <span className='font-medium text-[25px] font-light pl-2'>{'->'}</span>
         </button>
       )}
       {schemeState === 'claim_token' && (
         <button
-          className="bg-[#FF70091A] w-full bg-[20%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[15px]"
+          className="bg-[#FF70094D] w-full bg-[30%] rounded-[8px] text-[#FF7009] font-Geist text-[16px] py-[16px] leading-[19.84px] mt-[15px]"
           onClick={claim}
         >
-          CLAIM NOW {'->'}
+          CLAIM NOW <span className='text-2xl font-medium pl-2 font-light text-[25px]'>{'->'}</span>
         </button>
       )}
       {schemeState === 'claimed' && (
