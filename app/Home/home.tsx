@@ -34,12 +34,12 @@ const data: RowData[] = [
 
 function HomePage() {
   const [amount, setAmount] = useState<string>('');
-  const isSchemeStarted = false;
-  const isTotalDeposit = false;
+  const isSchemeStarted = true;
+  const isTotalDeposit = true;
   const isWallet = true;
-  const isClaim = false;
-  const isClaimed = false;
-  const isYourDeposite = false;
+  const isClaim = true;
+  const isClaimed = true;
+  const isYourDeposite = true;
 
   return (
     <div>
