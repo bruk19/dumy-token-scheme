@@ -167,7 +167,7 @@ export const WalletProvider = ({ children }: GlobalStateProviderProps) => {
       value={{
         wallet,
         switchNetwork,
-        connectWallet,
+        connectWallet, // Make sure this is exported
         contractInstance,
         chainId,
         mantleNetwork,

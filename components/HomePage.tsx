@@ -102,7 +102,7 @@ function HomePage() {
                     Scheme Has Started
                   </p>
                 ) : (
-                  <p className="font-Geist text-[18px] mt-[12px] mx-[19px] p-[10px] flex justify-center items-center font-medium rounded-[32px] leading-[22.32px] text-[#A28B1B] bg-[#231D00]">
+                  <p className="font-Geist text-[18px] mt-[12px] mx-[15px] p-[10px] flex justify-center items-center font-medium rounded-[32px] leading-[22.32px] text-[#A28B1B] bg-[#231D00]">
                     Scheme Has Not Started
                   </p>
                 )
