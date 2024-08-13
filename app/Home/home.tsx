@@ -37,8 +37,8 @@ function HomePage() {
   const isSchemeStarted = true;
   const isTotalDeposit = true;
   const isWallet = true;
-  const isClaim = true;
-  const isClaimed = true;
+  const isClaim = false;
+  const isClaimed = false;
   const isYourDeposite = true;
 
   return (
