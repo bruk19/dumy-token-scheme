@@ -32,7 +32,7 @@
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://dumy-token-scheme.vercel.app/)
 
 ## Prerequisites
 
