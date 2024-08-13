@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./Header/Header";
+import Header from "@/components/Header";
+import { WalletProvider } from "@/components/WalletProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html className="bg-custom-bg min-h-screen" lang="en">
+      <WalletProvider>
       <body className={inter.className}>
         <Header />
         {children}
         </body>
+        </WalletProvider>
     </html>
   );
 }
