@@ -238,16 +238,16 @@ function HomePage() {
           </div>
         )}
         {!isClaim && (
-          <div className="w-[75.5%] mt-[190px] flex">
-            <div className="bg-[#0D0D0D] w-[65.5%] mt-[30px] border border-[#1A1919] max-h-[502px] rounded-[8px]">
-              <div>
-                <p className="ml-[16px] mt-[16px] text-primary w-[106px] font-Geist text-[16px] leading-[19.84px]">
+          <div className="md:w-[75.5%] w-[80%] md:mt-[190px] mt-10 flex md:flex-row flex-col justify-center">
+            <div className="bg-[#0D0D0D] md:w-[65.5%] w-full mt-[30px] md:border md:border-[#1A1919] max-h-[502px] rounded-[8px]">
+              <div className="flex flex-col">
+                <p className="ml-[16px] mt-[16px] text-primary font-Geist text-[16px] leading-[19.84px]">
                   Your Deposits
                 </p>
                 <div>
                   <table className=" w-full mt-[16px]">
-                    <thead className="border-t-[1px] border-b-[1px] border-[#1A1919]">
-                      <tr className="text-[#5C5C5C] font-Geist text-base font-medium leading-[19.84px]">
+                    <thead className="border-t-[1px] border-b-[1px] border-[#1A1919] ">
+                      <tr className="text-[#5C5C5C] font-Geist text-base font-medium leading-[19.84px] flex items-center gap-6">
                         <th
                           className="py-[6px] text-[#5C5C5C] font-Geist text-base font-medium leading-[19.84px]"
                           scope="col"
@@ -277,7 +277,7 @@ function HomePage() {
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="gap-y-2">
+                    <tbody className="gap-y-2 flex flex-col justify-center w-full">
                     {prepareTableData(
                         data?.deposits,
                         wallet || '' 
@@ -287,7 +287,7 @@ function HomePage() {
                         <td colSpan={5}>
                           <div className="w-full h-full flex flex-col justify-center items-center pb-20">
                             <Image
-                              className="mt-32"
+                              className="md:mt-32 mt-20"
                               src="/Locker-Safe.png"
                               alt="usdt"
                               width={41}
@@ -344,7 +344,7 @@ function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="w-[31.7%] h-[228px] bg-[#0D0D0D] border border-[#1A1919] relative mt-[30px] ml-[25px] rounded-[8px]">
+            <div className="md:w-[31.7%] h-[228px] bg-[#0D0D0D] border border-[#1A1919] relative mt-[30px] ml-[25px] rounded-[8px]">
               <div className="flex justify-between items-center px-[15px] py-[20px]">
                 <p className="text-primary font-Geist text-4 leading-[19.84px]">
                   Create Deposite
