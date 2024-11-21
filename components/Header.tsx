@@ -19,14 +19,16 @@ function Header() {
   };
 
   return (
-    <div className="bg-[#0D0D0D] max-w-[1512px] h-[59px] gap-0 border-b border-black/0">
-      <h2 className="absolute top-[19px] left-[20px] font-Geist text-[16px] font-medium leading-[19.84px] text-center text-primary">
+    <div className="bg-[#0D0D0D] flex justify-between items-center px-8  max-w-[1512px] h-[59px] gap-0 border-b border-black/0">
+      <div className='flex flex-row gap-4'>
+        <h2 className="font-Geist text-[16px] font-medium leading-[19.84px] text-center text-primary">
         Claim Rewards
       </h2>
-      <p className="absolute top-[19px] left-[149px] text-secondary font-Geist text-[16px] font-medium leading-[19.84px] text-left">
+      <p className="text-secondary font-Geist text-[16px] font-medium leading-[19.84px] text-left md:block hidden">
         decentralized application for a dummy token
       </p>
-      <div className="fixed w-[123px] h-[35px] top-[12px] right-[15px] gap-[6.16px] flex items-center justify-center rounded-[8px] bg-[#FF700933] bg-[20%] shadow-[0px_0.77px_1.54px_0px_#0000000D] text-[#FF7009]">
+      </div>
+      <div className="py-2 px-3 gap-[6.16px] flex items-center justify-center rounded-[8px] bg-[#FF700933] bg-[20%] shadow-[0px_0.77px_1.54px_0px_#0000000D] text-[#FF7009]">
         <button
           className="font-Geist text-[14px] flex items-center font-medium leading-[15.41px]"
           onClick={handleWalletConnection}
