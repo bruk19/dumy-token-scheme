@@ -88,10 +88,10 @@ function HomePage() {
   return (
     <div>
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="absolute w-[75.5%] h-[140px] top-[109px] rounded-[8px] bg-[#0D0D0D] border border-[#1A1919]">
-          <div className="flex">
+        <div className="pt-14 rounded-[8px] bg-[#0D0D0D] border border-[#1A1919]">
+          <div className="flex md:flex-row flex-col md:gap-[120px] gap-10">
             <div>
-              <p className="w-[107px] h-[30px] font-Geist text-[24px] font-medium leading-[29.76px] text-left px-[28px] py-[28px] text-primary">
+              <p className="font-Geist text-[24px] font-medium leading-[29.76px] text-left md:px-[28px] md:py-[28px] text-primary">
                 Overview
               </p>
                {isClaim ? (
@@ -108,12 +108,12 @@ function HomePage() {
                 )
               )}
             </div>
-            <div className="flex mt-[40px] ml-[200px]">
-              <div>
-                <p className="text-[#5C5C5C] font-Geist text-[16px] w-[121px] h-[20px] leading-[19.84px]">
+            <div className="flex md:flex-row flex-col md:mt-[40px] mt-10 md:gap-14 gap-8">
+              <div className="flex md:flex-col flex-row gap-6 md:gap-0">
+                <p className="text-[#5C5C5C] font-Geist text-[16px] w-[121px] leading-[19.84px]">
                   Global Deposit
                 </p>
-                <div className="flex mt-[10px] justify-end gap-[5px]">
+                <div className="flex md:mt-[10px] mt-0 justify-end gap-[5px]">
                 {isTotalDeposit ? (
                   <p className="text-[#5C5C5C] font-Geist text-[16px] leading-[19.84px]">
                     {loading || error ? "--" : getGlobalDeposit(data?.deposits)}
@@ -126,11 +126,11 @@ function HomePage() {
                   <Image src="/USDT.png" alt="usdt" width={20} height={20} />
                 </div>
               </div>
-              <div className="mx-[50px] justify-end">
+              <div className="flex md:flex-col flex-row md:gap-0 gap-6">
                 <p className="text-[#5C5C5C] font-Geist text-[16tpx] w-[148px] h-[20px] leading-[19.84px]">
                   Your Total Deposits
                 </p>
-                <div className="flex mt-[10px] justify-end gap-[4px]">
+                <div className="flex md:mt-[10px] justify-end items-center gap-[4px]">
                   <p className="text-white font-Geist text-[16px] leading-[19.84px]">
                     {loading || error
                       ? "--"
@@ -143,11 +143,11 @@ function HomePage() {
                   <Image src="/USDT.png" alt="usdt" width={20} height={20} />
                 </div>
               </div>
-              <div>
+              <div className="flex md:flex-col flex-row md:gap-0 gap-8">
                 <p className="text-[#5C5C5C] font-Geist text-[16px] leading-[19.84px]">
                   Your Total Points
                 </p>
-                <div className="flex mt-[10px] justify-end gap-[4px]">
+                <div className="flex justify-end pt-1">
                   {isTotalDeposit ? (
                     <p className="text-white font-Geist text-[16px] leading-[19.84px]">
                       111
@@ -160,7 +160,6 @@ function HomePage() {
                 </div>
               </div>
             </div>
-            <div></div>
           </div>
         </div>
         {isClaim && isClaimed && (
