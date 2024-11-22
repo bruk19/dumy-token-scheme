@@ -86,12 +86,12 @@ function HomePage() {
   }, 20000);
 
   return (
-    <div>
+    <div className="py-16">
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="pt-14 rounded-[8px] bg-[#0D0D0D] border border-[#1A1919]">
+        <div className="py-6 px-8 rounded-[8px] bg-[#0D0D0D] border border-[#1A1919] md:mt-4">
           <div className="flex md:flex-row flex-col md:gap-[120px] gap-10">
             <div>
-              <p className="font-Geist text-[24px] font-medium leading-[29.76px] text-left md:px-[28px] md:py-[28px] text-primary">
+              <p className="font-Geist text-[24px] font-medium leading-[29.76px] text-left md:px-[28px] md:py-[24px] text-primary">
                 Overview
               </p>
                {isClaim ? (
@@ -108,7 +108,7 @@ function HomePage() {
                 )
               )}
             </div>
-            <div className="flex md:flex-row flex-col md:mt-[40px] mt-10 md:gap-14 gap-8">
+            <div className="flex md:flex-row flex-col md:mt-[40px] mt-10 md:gap-14 gap-8 px-6">
               <div className="flex md:flex-col flex-row gap-6 md:gap-0">
                 <p className="text-[#5C5C5C] font-Geist text-[16px] w-[121px] leading-[19.84px]">
                   Global Deposit
@@ -238,42 +238,39 @@ function HomePage() {
           </div>
         )}
         {!isClaim && (
-          <div className="md:w-[75.5%] w-[80%] md:mt-[190px] mt-10 flex md:flex-row flex-col justify-center">
+          <div className="md:w-[75.5%] w-[95%] md:mt-32 mt-14 flex md:flex-row flex-col justify-center px-4">
             <div className="bg-[#0D0D0D] md:w-[65.5%] w-full mt-[30px] md:border md:border-[#1A1919] max-h-[502px] rounded-[8px]">
               <div className="flex flex-col">
                 <p className="ml-[16px] mt-[16px] text-primary font-Geist text-[16px] leading-[19.84px]">
                   Your Deposits
                 </p>
                 <div>
-                  <table className=" w-full mt-[16px]">
-                    <thead className="border-t-[1px] border-b-[1px] border-[#1A1919] ">
-                      <tr className="text-[#5C5C5C] font-Geist font-medium md:text-[18px] text-[14px] leading-[19.84px] flex items-center gap-6">
+                  <table className=" w-full mt-[8px]">
+                    <thead className="border-t-[1px] border-b-[1px] border-[#1A1919]">
+                      <tr className="text-[#5C5C5C] font-Geist font-medium md:text-[18px] text-[14px] leading-[19.84px] flex items-center md:gap-6 gap-2 px-3">
                         <th
-                          className="py-[6px] text-[#5C5C5C] font-Geist text-base font-medium leading-[19.84px] md:text-[18px] text-[12px]"
+                          className="py-[6px] text-[#5C5C5C] font-Geist font-medium leading-[19.84px] md:text-[18px] text-[10px]"
                           scope="col"
                         >
                           Date
                         </th>
                         <th
-                          className="text-[#5C5C5C] font-Geist text-base font-medium leading-[19.84px] md:text-[18px] text-[12px]"
+                          className="text-[#5C5C5C] font-Geist font-medium leading-[19.84px] md:text-[18px] text-[10px]"
                           scope="col"
                         >
                           Deposit Amount
                         </th>
                         <th
-                          className="text-end text-[#5C5C5C] font-Geist text-base font-medium leading-[19.84px] md:text-[18px] text-[12px]"
+                          className="text-end text-[#5C5C5C] font-Geist font-medium leading-[19.84px] md:text-[18px] text-[10px]"
                           scope="col"
                         >
                           Points Gained
                         </th>
                         <th
-                          className="text-end pl-2 text-[#5C5C5C] font-Geist text-base font-medium leading-[19.84px] md:text-[18px] text-[12px]"
+                          className="text-end pl-2 text-[#5C5C5C] font-Geist font-medium leading-[19.84px] md:text-[18px] text-[10px]"
                           scope="col"
                         >
                           Unlocks In
-                        </th>
-                        <th className="pr-4 text-[#0D0D0D]" scope="col">
-                          New Column
                         </th>
                       </tr>
                     </thead>
