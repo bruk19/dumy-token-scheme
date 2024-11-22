@@ -88,7 +88,7 @@ function HomePage() {
   return (
     <div className="py-16">
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="py-6 px-8 rounded-[8px] bg-[#0D0D0D] border border-[#1A1919] md:mt-4">
+        <div className="py-4 px-8 rounded-[8px] bg-[#0D0D0D] border border-[#1A1919] md:mt-4">
           <div className="flex md:flex-row flex-col md:gap-[120px] gap-10">
             <div>
               <p className="font-Geist text-[24px] font-medium leading-[29.76px] text-left md:px-[28px] md:py-[24px] text-primary">
@@ -238,7 +238,7 @@ function HomePage() {
           </div>
         )}
         {!isClaim && (
-          <div className="md:w-[75.5%] w-[95%] md:mt-32 mt-14 flex md:flex-row flex-col justify-center px-4">
+          <div className="md:w-[75.5%] w-[95%] md:mt-10 mt-10 flex md:flex-row flex-col justify-center px-4">
             <div className="bg-[#0D0D0D] md:w-[65.5%] w-full mt-[30px] md:border md:border-[#1A1919] max-h-[502px] rounded-[8px]">
               <div className="flex flex-col">
                 <p className="ml-[16px] mt-[16px] text-primary font-Geist text-[16px] leading-[19.84px]">
