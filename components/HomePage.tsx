@@ -247,7 +247,7 @@ function HomePage() {
                 <div>
                   <table className=" w-full mt-[8px]">
                     <thead className="border-t-[1px] border-b-[1px] border-[#1A1919]">
-                      <tr className="text-[#5C5C5C] font-Geist font-medium md:text-[18px] text-[14px] leading-[19.84px] flex items-center md:gap-6 gap-2 px-3">
+                      <tr className="text-[#5C5C5C] font-Geist font-medium md:text-[18px] text-[14px] leading-[19.84px] flex items-center md:gap-6 gap-4 px-3">
                         <th
                           className="py-[6px] text-[#5C5C5C] font-Geist font-medium leading-[19.84px] md:text-[18px] text-[12px]"
                           scope="col"
