@@ -9,7 +9,6 @@ import { GET_DEPOSIT } from "@/queries";
 import { getGlobalDeposit, getMyDeposit, prepareTableData, formatTime } from "@/helper";
 import { useWalletProviderContext } from "./WalletProvider";
 
-
 function HomePage() {
   const [amount, setAmount] = useState<string>("0");
   const [balance, setBalance] = useState(0)
@@ -24,7 +23,6 @@ function HomePage() {
   const isTotalDeposit = false;
   let isClaim = false
   let isClaimed = false;
-
 
   const {wallet, usdtContractInstance} = useWalletProviderContext()
 
