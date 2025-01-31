@@ -10,6 +10,7 @@ interface Props {
   isClaim?: boolean,
   isSchemaStarted?: boolean
 }
+
 const SchemeButton: React.FC<Props> = ({ amount, callback, inputCallback, isClaim, isSchemaStarted }) => {
   const {
     contractInstance: contract,
@@ -52,8 +53,7 @@ const SchemeButton: React.FC<Props> = ({ amount, callback, inputCallback, isClai
         
       } catch (error) {
         console.log("Error on claiming:", error);
-      }
-    
+      }   
   };
 
   useEffect(() => {
